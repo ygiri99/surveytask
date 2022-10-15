@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        .star::after {
+            content:"*";
+            color:red;
+        }
+        .row-coustom>:not(:first-child) {
+          text-align: center;
+        }
+        .span {  
+           width: 50%;
+        }
+        td {
+          width: 16.66%;
+        }
+        .row-coustom:nth-of-type(even){
+          background-color: gray;
+          color: white;
+        }
+        .ora {
+          color: orange;
+        }
+    </style>
+  </head>
+  <body>
+    <form class="row g-3 p-3" id="surve-form">
+      <div class="col-sm-3">
+        <label for="fname" class="form-lable h4 star">Name</label>
+        <input type="text" class="form-control " name="fname" id="fname" required/>
+        <div>First</div>
+      </div>
+      <div class="col-sm-3">
+        <label for="lname" class="form-label">&nbsp;</label>
+        <input type="text" class="form-control" name="lname" id="lname" />
+        <div>Last</div>
+      </div>
+      <div class="col-sm-6"></div>
+        <label for="email" class="h4 star">Email</label>
+        <span class="span">
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="email"
+          required
+        /></span>
+      </div>
+      <div class="col-sm-6"></div>
+      <div class="col h4">
+        <p class="star">Your exprience</p>
+        <div>
+          <span class="fa fa-star fa-2x ora"></span>
+          <span class="fa fa-star fa-2x ora"></span>
+          <span class="fa fa-star fa-2x ora"></span>
+          <span class="fa fa-star fa-2x ora"></span>
+          <span class="fa fa-star fa-2x ora"></span>
+        </div>
+      </div>
+      <p>Overall rate your exprience with us</p>
+      <label for="exp" class="form-label h4 star">How likely your with</label>
+      <table class="table col overflow-auto">
+        <tr class="row-coustom">
+            <td></td>
+            <td>very Unlikely</td>
+            <td>Unlikely</td>
+            <td>Neutral</td>
+            <td>likely</td>
+            <td>Very likely</td>
+        </tr>
+        <tr class="row-coustom">
+            <td>Purchase</td>
+            <td> <input type="radio" name="purchase" value="1"></td>
+            <td> <input type="radio" name="purchase" value="2"></td>
+            <td> <input type="radio" name="purchase" value="3"></td>
+            <td> <input type="radio" name="purchase" value="4"></td>
+            <td> <input type="radio" name="purchase" value="5"></td>
+        </tr>
+        <tr class="row-coustom">
+            <td>Quality</td>
+            <td> <input type="radio" name="Quality" value="1"></td>
+            <td> <input type="radio" name="Quality" value="2"></td>
+            <td> <input type="radio" name="Quality" value="3"></td>
+            <td> <input type="radio" name="Quality" value="4"></td>
+            <td> <input type="radio" name="Quality" value="5"></td>
+        </tr>
+        <tr class="row-coustom">
+            <td>Company Overall</td>
+            <td> <input type="radio" name="Company Overall" value="1"></td>
+            <td> <input type="radio" name="Company Overall" value="2"></td>
+            <td> <input type="radio" name="Company Overall" value="3"></td>
+            <td> <input type="radio" name="Company Overall" value="4"></td>
+            <td> <input type="radio" name="Company Overall" value="5"></td>
+        </tr>
+      </table>
+      <label for="like" class="form-label h4 star">How likely are you to</label>
+      <table class="table overflow-auto">
+        <tr class="row-coustom">
+            <td></td>
+            <td>very Unlikely</td>
+            <td>Unlikely</td>
+            <td>Neutral</td>
+            <td>likely</td>
+            <td>Very likely</td>
+        </tr>
+        <tr class="row-coustom ">
+            <td>Buy from us Again</td>
+            <td> <input type="radio" name="buy" value="1"></td>
+            <td> <input type="radio" name="buy" value="2"></td>
+            <td> <input type="radio" name="buy" value="3"></td>
+            <td> <input type="radio" name="buy" value="4"></td>
+            <td> <input type="radio" name="buy" value="5"></td>
+        </tr>
+        <tr class="row-coustom">
+            <td>Recomended our product to others</td>
+            <td> <input type="radio" name="recomend" value="1"></td>
+            <td> <input type="radio" name="recomend" value="2"></td>
+            <td> <input type="radio" name="recomend" value="3"></td>
+            <td> <input type="radio" name="recomend" value="4"></td>
+            <td> <input type="radio" name="recomend" value="5"></td>
+        </tr>
+        <tr class="row-coustom">
+            <td>recomended our Company to others</td>
+            <td> <input type="radio" name="RCompany" value="1"></td>
+            <td> <input type="radio" name="RCompany" value="2"></td>
+            <td> <input type="radio" name="RCompany" value="3"></td>
+            <td> <input type="radio" name="RCompany" value="4"></td>
+            <td> <input type="radio" name="RCompany" value="5"></td>
+        </tr>
+      </table>
+    <label for="commend" class="form-label h4">Additional commends or suggestions</label>
+    <textarea class="form-control" id="commend"></textarea>
+    <div>
+     <button type="submit" name="submit" id="submit" >submit</button>
+    </div>
+    </form>
+  </body>
+</html>
